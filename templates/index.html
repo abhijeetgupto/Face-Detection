@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div class="jumbotron" style = "display : block">
+  <h1 style="display: block; justify-content: center; text-align: center">---Live Face Detection 🎦---</h1>
+  <br>
+  <br>
+  <div style="margin: auto 0px">
+    <center><img src="{{ url_for('video') }}" alt="Please turn on your camera !"/> </center>
+  </div>
+</div>
+
+{% endblock %}
