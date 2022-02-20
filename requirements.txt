@@ -1,5 +1,6 @@
 absl-py==1.0.0
 aniso8601==9.0.1
+appdirs==1.4.4
 attrs==21.4.0
 branca==0.4.2
 caer==2.0.8

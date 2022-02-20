@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+
+<br>
+  <center>
+  <h3>Click on submit to detect face from your webcam !</h3></center>
+  <center>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    {{form.submit}}
+    <br>
+  </form>
+     </center>
+
+</div>
+
+{% endblock %}
