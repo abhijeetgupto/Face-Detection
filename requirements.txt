@@ -2,6 +2,7 @@ absl-py==1.0.0
 aniso8601==9.0.1
 appdirs==1.4.4
 attrs==21.4.0
+bidict==0.21.4
 branca==0.4.2
 caer==2.0.8
 certifi==2021.10.8
@@ -11,7 +12,9 @@ click==8.0.3
 colorama==0.4.4
 cycler==0.11.0
 Flask==2.0.2
+Flask-Cors==3.0.10
 Flask-RESTful==0.3.9
+Flask-SocketIO==4.3.1
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.0.0
 folium==0.12.1.post1
@@ -28,6 +31,8 @@ httpcore==0.9.1
 httpx==0.13.3
 hyperframe==5.2.0
 idna==2.10
+imageio==2.16.0
+imutils==0.5.4
 itsdangerous==2.0.1
 Jinja2==3.0.3
 kiwisolver==1.3.2
@@ -44,12 +49,16 @@ pandas==1.3.5
 Pillow==9.0.1
 protobuf==3.19.4
 pyparsing==3.0.7
+pyshine==0.0.9
 pytesseract==0.3.8
 python-dateutil==2.8.2
+python-engineio==3.13.2
+python-socketio==4.6.0
 python-utils==3.1.0
 pytz==2021.3
 requests==2.27.1
 rfc3986==1.5.0
+simple-websocket==0.5.1
 six==1.16.0
 sniffio==1.2.0
 sortedcontainers==2.4.0
@@ -60,4 +69,5 @@ typing_extensions==4.0.1
 urllib3==1.26.8
 utils==1.0.1
 Werkzeug==2.0.2
+wsproto==1.0.0
 WTForms==3.0.1
