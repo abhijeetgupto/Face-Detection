@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Face Detection/Tracking</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@500&display=swap');
+      </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -12,7 +15,7 @@
      <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.0/socket.io.js'></script>
 </head>
 
-<body>
+<body style="overflow: hidden;">
 
 
   <nav class="navbar justify-content-center navbar-expand-lg  sticky-top navbar-dark bg-dark">
@@ -25,16 +28,30 @@
       </div>
     </div>
   </nav>
-
-
-    <div id="container" style="display:flex;" >
-    <video autoplay playsinline id="videoElement"></video>
-    <canvas id="canvas"  width=100% height=100%></canvas>
+<div class="flex-wrapper" style="display:flex; flex-direction: column; min-height: 100vh; justify-content: space-between;">
+  <div id="container" style="display: flex;">
+    <div id="video" style="display: block; margin: 0 auto; width: 33%;">
+      <video autoplay="" playsinline="" id="videoElement" style="
+      display: block;
+      margin: 0 auto;
+      margin-top: 7px;">
+      <canvas id="canvas" style="margin: top 15px" width="500" height="400"></canvas>
+      </video>
     </div>
 
-    <div class = 'video'>
-        <img id="photo"  width=100%  height=100%>
+    <div class = 'video' style="display: block; margin: 0 auto; border: 6px solid black; margin-top: 9px;">
+        <img id="photo"  width="502"  height=400>
     </div>
+  </div>
+  <div style="text-align: center; font-size: large; margin: 0 auto; padding: 5px 0px 5px; font-family: 'Roboto Serif', sans-serif"><a href="https://github.com/abhijeetgupto/Face-Detection" style="text-decoration: underline; ">CLICK HERE</a>👈 <div style="font-family: 'Roboto Serif', sans-serif""> TO SEE THE REPO</div>
+  </div>
+
+  <footer style="text-align: center; background: bisque; font-family: 'Roboto Serif', sans-serif; flex-direction: column; margin-bottom: 70px; height: 40px; padding: 8px 0px 8px;" >
+    <div class="text" >
+    A small collaborative project by <a href="https://github.com/abhijeetgupto" style="text-decoration:underline; color: black;">Abhijeet Gupta</a><p style="display:contents">,</p> <a href="https://github.com/rawsome24" style="text-decoration:underline; color: black;">Somesh Rawat</a><p style="display:contents">&</p> <a href="https://github.com/satyam-mahajan" style="text-decoration:underline; color: black;">Satyam Mahajan</a>
+    </div>
+  </footer>
+</div>
 
     <script type="text/javascript" charset="utf-8">
 
@@ -48,8 +65,8 @@
         var context = canvas.getContext('2d');
         const video = document.querySelector("#videoElement");
 
-        video.width = 400;
-        video.height = 300;
+        video.width = 500;
+        video.height = 400;
 
 
         if (navigator.mediaDevices.getUserMedia) {
